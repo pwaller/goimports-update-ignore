@@ -19,8 +19,8 @@ deep source trees, such as the linux kernel repository lying around.
 
 # Warning
 
-*Data loss risk*: Invoking this will overwrite any existing
-                  `$GOPATH/src/.goimportsignore` you have, without asking.
+**Data loss risk**: Invoking this will overwrite any existing
+                   `$GOPATH/src/.goimportsignore` you have, without asking.
 
 Magically ignoring things is the sort of thing you can easily forget about.
 Later you'll be wondering why something mysteriously doesn't work, and it will

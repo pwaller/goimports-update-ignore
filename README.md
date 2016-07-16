@@ -17,7 +17,7 @@ deep source trees, such as the linux kernel repository lying around.
 * Measure the number of directories scanned by goimports by invoking it and
   length of time and CPU time taken in the worst case.
 
-# Warning
+# Warnings
 
 **Data loss risk**: Invoking this will overwrite any existing
                    `$GOPATH/src/.goimportsignore` you have, without asking.

@@ -2,7 +2,11 @@ goimports-update-ignore
 =======================
 
 Scan `$GOPATH/src/` and generate a `$GOPATH/src/.goimportsignore` to make
-goimports run faster and use less CPU.
+[goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) run faster
+and use less CPU.
+
+`.goimportsignore` [was introduced](https://github.com/golang/go/issues/16386)
+to goimports on the 15th July 2016.
 
 # Why?
 

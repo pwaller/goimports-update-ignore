@@ -156,6 +156,7 @@ func getGoDirectories(goPath string, maxDepth int) (func(string) bool, error) {
 			return err
 		}
 
+		path = filepath.ToSlash(path)
 		parts := strings.Split(path, "/")
 		for i := 0; i < maxDepth && i+1 < len(parts); i++ {
 			goDirectories[filepath.Join(parts[:i+1]...)] = ø{}
@@ -192,6 +193,7 @@ func writeGoImportsIgnore(
 			return nil
 		}
 
+		path = filepath.ToSlash(path)
 		curDepth := strings.Count(path, "/") + 1
 
 		switch {

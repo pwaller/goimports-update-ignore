@@ -146,6 +146,10 @@ func getGoDirectories(goPath string, maxDepth int) (func(string) bool, error) {
 
 	err := filepath.Walk(goPath, func(path string, fi os.FileInfo, err error) error {
 		if err != nil {
+			if os.IsPermission(err) {
+				log.Printf("permission denied: %s", path)
+				return nil
+			}
 			return err
 		}
 		path, err = filepath.Rel(goPath, path)
